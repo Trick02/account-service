@@ -19,19 +19,19 @@ public class Account {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "customer_name", nullable = false)
+    @Column(name = "customer_name", nullable = false, length = 50)
     private String customerName;
 
-    @Column(name = "customer_mobile", nullable = false)
+    @Column(name = "customer_mobile", nullable = false, length = 20)
     private String customerMobile;
 
-    @Column(name = "customer_email", unique = true, nullable = false)
+    @Column(name = "customer_email", unique = true, nullable = false, length = 50)
     private String customerEmail;
 
-    @Column(name = "address_1", nullable = false)
+    @Column(name = "address_1", nullable = false, length = 100)
     private String address1;
 
-    @Column(name = "address_2")
+    @Column(name = "address_2", length = 100)
     private String address2;
 
     @Enumerated(EnumType.STRING)
